@@ -1,0 +1,11 @@
+[0m[[0m[31merror[0m] [0m[0m/Users/adnangondal/proj/scala/blackjack/src/test/scala/DeckTest.scala:1:8: object FunSuite is not a member of package org.scalatest[0m
+[0m[[0m[31merror[0m] [0m[0mdid you mean funsuite?[0m
+[0m[[0m[31merror[0m] [0m[0mimport org.scalatest.FunSuite[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/adnangondal/proj/scala/blackjack/src/test/scala/DeckTest.scala:3:24: not found: type FunSuite[0m
+[0m[[0m[31merror[0m] [0m[0mclass DeckTest extends FunSuite{[0m
+[0m[[0m[31merror[0m] [0m[0m                       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/adnangondal/proj/scala/blackjack/src/test/scala/DeckTest.scala:5:3: not found: value test[0m
+[0m[[0m[31merror[0m] [0m[0m  test("the name is set correctly in constructor") {[0m
+[0m[[0m[31merror[0m] [0m[0m  ^[0m
+[0m[[0m[31merror[0m] [0m[0mthree errors found[0m

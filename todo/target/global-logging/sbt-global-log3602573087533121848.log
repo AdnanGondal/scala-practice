@@ -1,0 +1,17 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(run, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 15 Scala sources to /Users/adnangondal/proj/scala/todo/target/scala-3.0.0/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m[31m-- [E008] Not Found Error: /Users/adnangondal/proj/scala/todo/src/main/scala/todo/PersistentModel.scala:56:20 [0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m56 |[0m    [33mval[0m [36mstr[0m = Files.readString(path, StandardCharsets.UTF_8)[0m
+[0m[[0m[31merror[0m] [0m[0m   |              [31m^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m   |          value readString is not a member of object java.nio.file.Files[0m
+[0m[[0m[31merror[0m] [0m[0m[31m-- [E008] Not Found Error: /Users/adnangondal/proj/scala/todo/src/main/scala/todo/PersistentModel.scala:89:10 [0m[0m
+[0m[[0m[31merror[0m] [0m[0m[31m89 |[0m    Files.writeString(path, json.spaces2, StandardCharsets.UTF_8)[0m
+[0m[[0m[31merror[0m] [0m[0m   |    [31m^^^^^^^^^^^^^^^^^[0m[0m
+[0m[[0m[31merror[0m] [0m[0m   |    value writeString is not a member of object java.nio.file.Files[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0mtwo errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 26 s, completed 06-Dec-2021 16:13:15[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(idea-shell, None, None)[0m

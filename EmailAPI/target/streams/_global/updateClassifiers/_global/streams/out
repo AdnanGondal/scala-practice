@@ -1,4 +1,3 @@
-[warn] scala-library-2.13.7-sources.jar no longer exists at /Users/chrisowen/Library/Caches/Coursier/v1/https/repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.7/scala-library-2.13.7-sources.jar
-[debug] not up to date. inChanged = false, force = false
+[debug] not up to date. inChanged = true, force = false
 [debug] Updating ProjectRef(uri("file:/Users/adnangondal/proj/scala/EmailAPI/"), "emailapi")...
 [debug] Done updating ProjectRef(uri("file:/Users/adnangondal/proj/scala/EmailAPI/"), "emailapi")

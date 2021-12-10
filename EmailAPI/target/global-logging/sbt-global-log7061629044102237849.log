@@ -1,0 +1,32 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(run, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Compile / run[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 5 Scala sources to /Users/adnangondal/proj/scala/EmailAPI/target/scala-2.13/classes ...[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/adnangondal/proj/scala/EmailAPI/src/main/scala/emailapi/Server.scala:10:27: object marshallers is not a member of package akka.http.scaladsl[0m
+[0m[[0m[31merror[0m] [0m[0mimport akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/adnangondal/proj/scala/EmailAPI/src/main/scala/emailapi/Server.scala:16:27: object marshallers is not a member of package akka.http.scaladsl[0m
+[0m[[0m[31merror[0m] [0m[0mimport akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/adnangondal/proj/scala/EmailAPI/src/main/scala/emailapi/Server.scala:17:8: not found: object spray[0m
+[0m[[0m[31merror[0m] [0m[0mimport spray.json._[0m
+[0m[[0m[31merror[0m] [0m[0m       ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/adnangondal/proj/scala/EmailAPI/src/main/scala/emailapi/Server.scala:21:27: not found: type SprayJsonSupport[0m
+[0m[[0m[31merror[0m] [0m[0mtrait JsonSupport extends SprayJsonSupport with DefaultJsonProtocol {[0m
+[0m[[0m[31merror[0m] [0m[0m                          ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/adnangondal/proj/scala/EmailAPI/src/main/scala/emailapi/Server.scala:21:49: not found: type DefaultJsonProtocol[0m
+[0m[[0m[31merror[0m] [0m[0mtrait JsonSupport extends SprayJsonSupport with DefaultJsonProtocol {[0m
+[0m[[0m[31merror[0m] [0m[0m                                                ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/adnangondal/proj/scala/EmailAPI/src/main/scala/emailapi/Server.scala:22:30: not found: value jsonFormat2[0m
+[0m[[0m[31merror[0m] [0m[0m  implicit val emailFormat = jsonFormat2(EmailAccount)[0m
+[0m[[0m[31merror[0m] [0m[0m                             ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/adnangondal/proj/scala/EmailAPI/src/main/scala/emailapi/Server.scala:23:34: not found: value jsonFormat1[0m
+[0m[[0m[31merror[0m] [0m[0m  implicit val emailRepoFormat = jsonFormat1(MailingListRepository)[0m
+[0m[[0m[31merror[0m] [0m[0m                                 ^[0m
+[0m[[0m[31merror[0m] [0m[0m/Users/adnangondal/proj/scala/EmailAPI/src/main/scala/emailapi/Server.scala:24:36: not found: value jsonFormat2[0m
+[0m[[0m[31merror[0m] [0m[0m  implicit val mailingListFormat = jsonFormat2(MailingList)[0m
+[0m[[0m[31merror[0m] [0m[0m                                   ^[0m
+[0m[[0m[31merror[0m] [0m[0m8 errors found[0m
+[0m[[0m[31merror[0m] [0m[0m(Compile / [31mcompileIncremental[0m) Compilation failed[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 0 s, completed 10 Dec 2021, 12:54:58[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(idea-shell, None, None)[0m

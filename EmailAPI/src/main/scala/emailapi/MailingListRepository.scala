@@ -4,45 +4,27 @@ import emailapi.models.{EmailAccount, MailingList}
 
 import scala.util.{Success, Try}
 
-class MailingListRepository {
+case class MailingListRepository(mailingLists: Map[String,MailingList]) {
 
-  private val mailingLists: Array[MailingList] = Array[MailingList]()
-
-  def addEmailToList(email: String, name: String, mailingListName: String): Try[String] = {
-    // Should return
-    //  Success("")
-    // or
-    //  Failure("")
-    // with an appropriate message
-    Success("")
+  def createMailingList(name: String): MailingListRepository ={
+    MailingListRepository(mailingLists + (name -> MailingList(name,Array[EmailAccount]())))
   }
 
-  def getMailingList(name: String): MailingList = {
+  def addEmailToList(account: EmailAccount, listName: String): Option[MailingListRepository] = ???
 
-    //Placeholder returned list
-    new MailingList("", Array[EmailAccount]())
+  def getMailingList(name: String): Option[MailingList] = {
+    mailingLists.get(name)
   }
 
-  def getAllMailingLists(): Array[MailingList] = mailingLists
+  def deleteMailingList(name: String): Try[String] = ???
 
+  def removeEmailFromMailingList(email: String, mailingListName: String): Try[String] = ???
+}
 
-  def deleteMailingList(name: String): Try[String] = {
-    
-    // Should return
-    //  Success("")
-    // or
-    //  Failure("")
-    // with an appropriate message
-    Success("")
-  }
+object MailingListRepository {
 
-  def removeEmailFromMailingList(email: String, mailingListName: String): Try[String] = {
-
-    // Should return
-    //  Success("")
-    // or
-    //  Failure("")
-    // with an appropriate message
-    Success("")
+  def init(): MailingListRepository={
+    MailingListRepository(Map[String,MailingList]())
   }
 }
+

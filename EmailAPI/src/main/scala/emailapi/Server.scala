@@ -7,13 +7,24 @@ import scala.util.{Failure, Success}
 import akka.actor.typed.ActorSystem
 import akka.actor.typed.scaladsl.Behaviors
 import akka.http.scaladsl.Http
+import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
 import akka.http.scaladsl.model._
 import akka.http.scaladsl.server.Directives._
 import akka.http.scaladsl.server.Route
+import emailapi.models.{EmailAccount, MailingList, MailingLists}
+import akka.http.scaladsl.server.Directives
+import akka.http.scaladsl.marshallers.sprayjson.SprayJsonSupport
+import spray.json._
 
 import scala.io.StdIn
 
-object Server extends App {
+trait JsonSupport extends SprayJsonSupport with DefaultJsonProtocol {
+  implicit val emailFormat = jsonFormat2(EmailAccount)
+  implicit val mailingListFormat = jsonFormat2(MailingList)
+  implicit val repoFormat = jsonFormat1(MailingLists)
+}
+
+object Server extends App with JsonSupport {
 
   //Write your code below here
   implicit val system = ActorSystem(Behaviors.empty, "my-system")
@@ -21,6 +32,10 @@ object Server extends App {
   implicit val executionContext = system.executionContext
   val port = 8080
   val host = "localhost"
+
+  var store = MailingListRepository.init()
+  store = store.createMailingList("Adnans contacts")
+
 
   val helloRoute =
     path("hello") {
@@ -33,36 +48,19 @@ object Server extends App {
       }
     }
 
-
   val mailingListRoute = pathEndOrSingleSlash {
     concat(
       get{
-        complete("getting all mailing lists")
+        complete(MailingLists(store.mailingLists.values.toArray))
       },
       post{
         entity(as[String]) { str => {
-          complete(s"Posting a new mailing list: "+ str)
+          complete(s"Posting / creating a new mailing list: "+ str)
         }
         }
       }
     )
   }
-
-  // localhost/lists/
-//  GET: get all mailing lists
-  // POST: make a new mailing list
-
-// localhost/lists/{ID}
-// DELETE: delete meailing list
-  // POST: add email to mailing list // or multiple emails
-  // GET: get all emails in the mailing list
-
-
-// localhost/lists/{name}/email
-  // POST: SEND EMAILS
-
-  // localhost/lists/{name}/email/{ID}
-  // DELETE: remove email from mailing list
 
   val changeMailingListRoute =  path(Segment) { name =>
     concat(

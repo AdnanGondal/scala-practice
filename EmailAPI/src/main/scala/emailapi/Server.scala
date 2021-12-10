@@ -55,7 +55,8 @@ object Server extends App with JsonSupport {
       },
       post{
         entity(as[String]) { str => {
-          complete(s"Posting / creating a new mailing list: "+ str)
+          store = store.createMailingList(str)
+          complete(s"Created a new mailing list: "+ str)
         }
         }
       }

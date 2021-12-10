@@ -11,6 +11,10 @@ case class MailingList(name: String, emails: Array[EmailAccount]) {
   def addEmailAccount(account: EmailAccount): MailingList = {
    MailingList(name,emails :+ account)
   }
+
+  def addBatchEmails(emailsBatch: Array[EmailAccount]): MailingList = {
+    MailingList(name,emails :++ emailsBatch)
+  }
 }
 
-case class MailingLists(lists: Array[MailingList])
+case class MailingLists(mailingLists: Array[MailingList])

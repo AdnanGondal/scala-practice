@@ -6,8 +6,8 @@ import scala.util.{Success, Try}
 
 case class MailingListRepository(mailingLists: Map[String,MailingList]) {
 
-  def createMailingList(name: String): MailingListRepository ={
-    MailingListRepository(mailingLists + (name -> MailingList(name,Array[EmailAccount]())))
+  def createMailingList(mailingList: MailingList): MailingListRepository ={
+    MailingListRepository(mailingLists + (mailingList.name -> mailingList))
   }
 
   def addEmailToList(account: EmailAccount, listName: String): Option[MailingListRepository] = ???

@@ -34,7 +34,7 @@ object Server extends App with JsonSupport {
   val host = "localhost"
 
   var store = MailingListRepository.init()
-  store = store.createMailingList("Adnans contacts")
+
 
 
   val helloRoute =
@@ -54,9 +54,9 @@ object Server extends App with JsonSupport {
         complete(MailingLists(store.mailingLists.values.toArray))
       },
       post{
-        entity(as[String]) { str => {
-          store = store.createMailingList(str)
-          complete(s"Created a new mailing list: "+ str)
+        entity(as[MailingList]) { mailingList => {
+          store = store.createMailingList(mailingList)
+          complete(s"Created a new mailing list.")
         }
         }
       }
@@ -67,7 +67,10 @@ object Server extends App with JsonSupport {
     concat(
       get {
         // check rejectEmptyResponse
-        complete(s"get the following mailing list: ${name}")
+        store.getMailingList(name) match{
+          case Some(value) => complete(value)
+          case None => complete(StatusCodes.BadRequest)
+        }
       },
       post {
         entity(as[String]){str => {

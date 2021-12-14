@@ -10,7 +10,12 @@ case class MailingListRepository(mailingLists: Map[String,MailingList]) {
     MailingListRepository(mailingLists + (mailingList.name -> mailingList))
   }
 
-  def addEmailToList(account: EmailAccount, listName: String): Option[MailingListRepository] = ???
+  def addEmailToList(account: EmailAccount, listName: String): Option[MailingListRepository] = {
+    mailingLists.get(listName) match {
+      case Some(list) => Option(MailingListRepository(mailingLists + (list.name -> (list.addEmailAccount(account)))))
+      case None => None
+    }
+  }
 
   def getMailingList(name: String): Option[MailingList] = {
     mailingLists.get(name)

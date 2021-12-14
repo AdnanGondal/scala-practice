@@ -35,17 +35,34 @@ object Server extends App with JsonSupport {
 
   var store = MailingListRepository.init()
 
+  val smallRoute =
+    get {
+      concat(
+        pathSingleSlash {
+          complete {
+            "Captain on the bridge!"
+          }
+        },
+        path("ping") {
+          complete("PONG!")
+        }
+      )
+    }
+
 
 
   val helloRoute =
-    path("hello") {
-      get {
-        complete(HttpEntity(ContentTypes.`text/html(UTF-8)`, "<h1>Say hello to akka-http</h1>"))
-      } ~ post {
-        entity(as[String]) { str =>
-          complete(s"Received String : ${str}")
+    get {
+      concat(
+        pathSingleSlash {
+          complete {
+            "Captain on the bridge!"
+          }
+        },
+        path("hello") {
+          complete("HELLO")
         }
-      }
+      )
     }
 
   val mailingListRoute = pathEndOrSingleSlash {
@@ -69,12 +86,18 @@ object Server extends App with JsonSupport {
         // check rejectEmptyResponse
         store.getMailingList(name) match{
           case Some(value) => complete(value)
-          case None => complete(StatusCodes.BadRequest)
+          case None => complete(StatusCodes.Forbidden)
         }
       },
       post {
-        entity(as[String]){str => {
-          complete(s"adding to the mailing list  ${name} with "+str)
+        entity(as[EmailAccount]){emailAcc => {
+          store.addEmailToList(emailAcc,name) match {
+            case Some(newStore) => {
+              store = newStore
+              complete(s"adding to the mailing list  ${name} with "+emailAcc)
+            }
+            case None => {complete(StatusCodes.Forbidden)}
+          }
         }
         }
       },

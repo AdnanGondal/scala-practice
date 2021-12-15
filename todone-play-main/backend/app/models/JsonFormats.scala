@@ -1,5 +1,7 @@
 package models
 
+// JSON formatting? to allow marshalling
+
 import play.api.libs.json._
 import todone.data._
 
@@ -37,4 +39,7 @@ object JsonFormats {
 
   implicit val tasksFormat: Format[Tasks] =
     Json.format[Tasks]
+
+  implicit val projectsFormat: Format[Projects] =
+    Json.format[Projects]
 }

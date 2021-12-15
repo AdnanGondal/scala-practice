@@ -46,6 +46,7 @@ lazy val backend = project
   .settings(
     sharedSettings,
     libraryDependencies += guice,
+    run / fork := true,
     build := {
       Def.sequential(scalafixAll.toTask(""), scalafmtAll, Test / test).value
     }

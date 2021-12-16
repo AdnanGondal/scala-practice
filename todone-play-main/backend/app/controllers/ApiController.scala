@@ -53,5 +53,12 @@ class ApiController @Inject() (
     Ok(Json.toJson(model.projects))
   }
 
+  def close(id: Int) = Action {implicit request: Request[AnyContent] => {
+    model.close(Id(id=id)) match {
+      case Some(value) => Ok(Json.toJson(value))
+      case None => BadRequest("Error: Id not found")
+    }
+  }}
+
 
 }

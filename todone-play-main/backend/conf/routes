@@ -14,4 +14,5 @@ GET     /api/tasks                  controllers.ApiController.tasks()
 POST    /api/task                   controllers.ApiController.create()
 GET     /api/tags                   controllers.ApiController.tags()
 GET     /api/projects               controllers.ApiController.projects()
+POST    /api/task/:id/close        controllers.ApiController.close(id: Int)
 

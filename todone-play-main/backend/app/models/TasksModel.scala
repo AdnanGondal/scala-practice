@@ -42,7 +42,7 @@ class TasksModel() {
       Tags(List(Tag("scalabridge"), Tag("backend")))
     ),
     Id(4) -> Task(
-      State.open,
+      State.closed,
       "Have a break!",
       "Go to bed.",
       None,
@@ -68,17 +68,19 @@ class TasksModel() {
   }
 
   def tags: Tags = {
-                                        // counter productive piece of code?
-                                        // could we make this more readable?
-                                        //
-    //Tags(tasksStore.toArray.flatMap(elem => elem._2.tags.tags).toSet.toList)
-    // pattern matching takes place, on single paramter,
-    // break it into two elements that make up a tuple
     Tags(tasksStore.toArray.flatMap{ case (id, task) => task.tags.tags}.toSet.toList)
   }
 
   def projects: Projects = {
     Projects(tasksStore.toArray.map(elem => elem._2.project.getOrElse(Project("Not assigned"))).toSet.toList)
+  }
+
+  def close(id : Id): Option[Id] = {
+    tasksStore.get(id) match{
+      case Some(value) => {tasksStore(id)  = value.close
+                            Some(id)}
+      case None => None
+    }
   }
 
   def create(task: Task): Id = {

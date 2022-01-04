@@ -11,6 +11,7 @@ case class MailingListRepository(mailingLists: Map[String,MailingList]) {
   }
 
   def addEmailToList(account: EmailAccount, listName: String): Option[MailingListRepository] = {
+    // map instead...
     mailingLists.get(listName) match {
       case Some(list) => Option(MailingListRepository(mailingLists + (list.name -> (list.addEmailAccount(account)))))
       case None => None
@@ -31,5 +32,11 @@ object MailingListRepository {
   def init(): MailingListRepository={
     MailingListRepository(Map[String,MailingList]())
   }
+
+  // single;
+  // cant instantiate it again.
+  // put utility methods here...
+
+  //
 }
 

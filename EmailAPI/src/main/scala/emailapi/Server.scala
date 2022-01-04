@@ -35,22 +35,6 @@ object Server extends App with JsonSupport {
 
   var store = MailingListRepository.init()
 
-  val smallRoute =
-    get {
-      concat(
-        pathSingleSlash {
-          complete {
-            "Captain on the bridge!"
-          }
-        },
-        path("ping") {
-          complete("PONG!")
-        }
-      )
-    }
-
-
-
   val helloRoute =
     get {
       concat(

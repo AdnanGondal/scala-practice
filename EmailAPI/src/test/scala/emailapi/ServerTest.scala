@@ -4,12 +4,26 @@ import akka.http.scaladsl.model.StatusCodes
 import akka.http.scaladsl.testkit.ScalatestRouteTest
 import akka.http.scaladsl.server._
 import Directives._
-import emailapi.Server.{helloRoute, smallRoute}
+import emailapi.Server._
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
 
 class ServerTest extends AnyWordSpec with Matchers with ScalatestRouteTest {
   println(helloRoute)
+
+  val smallRoute =
+    get {
+      concat(
+        pathSingleSlash {
+          complete {
+            "Captain on the bridge!"
+          }
+        },
+        path("ping") {
+          complete("PONG!")
+        }
+      )
+    }
 
   "The service" should {
 

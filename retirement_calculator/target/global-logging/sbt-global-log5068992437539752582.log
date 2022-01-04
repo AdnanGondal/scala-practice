@@ -1,0 +1,23 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(test, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / test[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/adnangondal/proj/scala/retirement_calculator/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mRetCalcSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mRetCalc.futureCapital[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should calculate the amount of savings I will have in n months[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mRetCalc.futureCapital[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should calculate how much savings will be left after having taken a pension for n months[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mRetCalc.simulatePlan[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should calculate the capital at retirement and capital after death *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  3855751.5515491567 did not equal 309867.5316 (RetCalcSpec.scala:42)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 252 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 3[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 2, failed 1, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
+[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
+[0m[[0m[31merror[0m] [0m[0m	retcalc.RetCalcSpec[0m
+[0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 3 s, completed 04-Jan-2022 12:17:52[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(idea-shell, None, None)[0m

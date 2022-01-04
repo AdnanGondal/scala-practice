@@ -1,0 +1,47 @@
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(test, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / test[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/adnangondal/proj/scala/retirement_calculator/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/adnangondal/proj/scala/retirement_calculator/target/scala-2.13/test-classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mSimulatePlanIT:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mSimulatePlanApp.strMain[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should simulate a retirement plan using market returns[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mReturnsSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mVariableReturns.fromUntil[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should keep only a window of the returns[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mReturns.monthRate[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return a fixed rate for a fixed return[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the nth rate for VariableReturn[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should roll over from the first rate if n > length[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the n+offset th rate for OffsetReturn[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mReturns.fromEquityAndInflationData[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should compute real total returns from equity and inflation data[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mInflationDataSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mInflationData.fromResource[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should load CPI data from a tsv file[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mEquityDataSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mEquityData.fromResource[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should load market data from a tsv file[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mEquityData.monthlyDividend[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return a monthly dividend[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mRetCalcSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mRetCalc.futureCapital[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should calculate the amount of savings I will have in n months[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mRetCalc.futureCapital[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should calculate how much savings will be left after having taken a pension for n months[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mRetCalc.nbOfMonthsSaving[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should calculate how long I need to save before I can retire[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should not crash if the resulting nbOfMonths is very high[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should not loop forever if I enter bad parameters[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  should RetCalc.simulatePlan[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should calculate the capital at retirement and the capital after death[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should use different returns for capitalisation and drawdown[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 42 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 17[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 5, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 17, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 3 s, completed 04-Jan-2022 17:00:13[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(idea-shell, None, None)[0m

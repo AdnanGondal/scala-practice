@@ -1,8 +1,13 @@
 [0m[[0m[0mdebug[0m] [0m[0m> Exec(test, None, None)[0m
 [0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / test[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
-[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/adnangondal/proj/scala/retirement_calculator/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/adnangondal/proj/scala/retirement_calculator/target/scala-2.13/test-classes ...[0m
 [0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mEquityDataSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mEquityData.fromResource[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should load market data from a tsv file[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mEquityData.monthlyDividend[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return a monthly dividend[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mReturnsSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mVariableReturns.fromUntil[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should keep only a window of the returns[0m[0m
@@ -23,10 +28,10 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m  should RetCalc.simulatePlan[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should calculate the capital at retirement and the capital after death[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should use different returns for capitalisation and drawdown[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 830 milliseconds.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 12[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 2, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 12, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 14 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 14[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 3, aborted 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 14, failed 0, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
-[0m[[0m[32msuccess[0m] [0m[0mTotal time: 4 s, completed 04-Jan-2022 15:43:27[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 2 s, completed 04-Jan-2022 16:00:25[0m
 [0m[[0m[0mdebug[0m] [0m[0m> Exec(idea-shell, None, None)[0m

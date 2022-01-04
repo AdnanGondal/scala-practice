@@ -1,4 +1,5 @@
 #Successful Tests
-#Tue Jan 04 15:43:27 GMT 2022
-retcalc.ReturnsSpec=1641311007038
-retcalc.RetCalcSpec=1641311007635
+#Tue Jan 04 16:00:25 GMT 2022
+retcalc.ReturnsSpec=1641312024305
+retcalc.EquityDataSpec=1641312024299
+retcalc.RetCalcSpec=1641312025032

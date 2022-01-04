@@ -8,6 +8,7 @@ class RetCalcSpec extends AnyWordSpec with
   TypeCheckedTripleEquals with Matchers {
   implicit val doubleEquality: Equality[Double] =
     TolerantNumerics.tolerantDoubleEquality(0.0001)
+
   "RetCalc.futureCapital" should {
     "calculate the amount of savings I will have in n months" in {
       val actual = RetCalc.futureCapital(
@@ -61,8 +62,15 @@ class RetCalcSpec extends AnyWordSpec with
       actual should ===(expected)
     }
 
-    "not loop forever if I enter bad parameters" in pending
+    "not loop forever if I enter bad parameters" in {
+      val actual = RetCalc.nbOfMonthsSaving(
+        interestRate = 0.04 / 12, nbOfMonthsInRetirement = 40 * 12,
+        netIncome = 1000, currentExpenses = 2000, initialCapital = 10000)
+      actual should === (Int.MaxValue)
+    }
 
   }
+
+
 
 }

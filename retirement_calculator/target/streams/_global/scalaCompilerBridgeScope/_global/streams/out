@@ -1,1 +1,0 @@
-[0m[[0m[31merror[0m] [0m[0minsecure HTTP request is unsupported 'http://repo.artima.com/releases'; switch to HTTPS or opt-in as ("Artima Maven Repository" at "http://repo.artima.com/releases").withAllowInsecureProtocol(true), or by using allowInsecureProtocol in repositories file[0m

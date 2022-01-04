@@ -1,27 +1,32 @@
 [0m[[0m[0mdebug[0m] [0m[0m> Exec(test, None, None)[0m
 [0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / test[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
-[0m[[0m[0minfo[0m] [0m[0mcompiling 2 Scala sources to /Users/adnangondal/proj/scala/retirement_calculator/target/scala-2.13/test-classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/adnangondal/proj/scala/retirement_calculator/target/scala-2.13/classes ...[0m
 [0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
-[0m[[0m[33mwarn[0m] [0m[0mGetting the hostname Adnans-MacBook-Pro.local was slow (5009.411875 ms). This is likely because the computer's hostname is not set. You can set the hostname with the command: scutil --set HostName "$(scutil --get LocalHostName).local".[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mReturnsSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mVariableReturns.fromUntil[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should keep only a window of the returns[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mReturns.monthRate[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return a fixed rate for a fixed return[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the nth rate for VariableReturn[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should roll over from the first rate if n > length[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the n+offset th rate for OffsetReturn[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mRetCalcSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mRetCalc.futureCapital[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should calculate the amount of savings I will have in n months[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mRetCalc.futureCapital[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should calculate how much savings will be left after having taken a pension for n months[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mRetCalc.simulatePlan[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should calculate the capital at retirement and capital after death[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mRetCalc.nbOfMonthsSaving[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should calculate how long I need to save before I can retire[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should not crash if the resulting nbOfMonths is very high[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should not loop forever if I enter bad parameters[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 882 milliseconds.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 7[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  should RetCalc.simulatePlan[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should calculate the capital at retirement and the capital after death[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m  - should use different returns for capitalisation and drawdown[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 830 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 12[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 2, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 7, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 12, failed 0, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
-[0m[[0m[32msuccess[0m] [0m[0mTotal time: 6 s, completed 04-Jan-2022 13:03:15[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 4 s, completed 04-Jan-2022 15:43:27[0m
 [0m[[0m[0mdebug[0m] [0m[0m> Exec(idea-shell, None, None)[0m

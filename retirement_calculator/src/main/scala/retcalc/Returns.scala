@@ -17,10 +17,26 @@ case class VariableReturn(monthId: String, monthlyRate: Double)
 object Returns {
 
   def monthlyRate(returns: Returns, month: Int): Double = {
-        returns match {
-          case FixedReturns(r) => r/12
-          case VariableReturns(rs) => rs(month % rs.length).monthlyRate
-          case OffsetReturns(rs,offset) => monthlyRate(rs,month+offset)
-        }
+    returns match {
+      case FixedReturns(r) => r / 12
+      case VariableReturns(rs) => rs(month % rs.length).monthlyRate
+      case OffsetReturns(rs, offset) => monthlyRate(rs, month + offset)
+    }
   }
+
+  def fromEquityAndInflationData(equities: Vector[EquityData],
+                                 inflations: Vector[InflationData]):
+  VariableReturns = {
+    VariableReturns(equities.zip(inflations).sliding(2).collect {
+      case (prevEquity, prevInflation) +: (equity, inflation) +:
+        Vector() =>
+        val inflationRate = inflation.value / prevInflation.value
+        val totalReturn =
+          (equity.value + equity.monthlyDividend) / prevEquity.value
+        val realTotalReturn = totalReturn - inflationRate
+        VariableReturn(equity.monthId, realTotalReturn)
+    }.toVector)
+
+  }
+
 }

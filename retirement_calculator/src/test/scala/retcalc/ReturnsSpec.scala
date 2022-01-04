@@ -50,5 +50,24 @@ class ReturnsSpec extends AnyWordSpec with TypeCheckedTripleEquals with Matchers
 
   }
 
+  "Returns.fromEquityAndInflationData" should {
+    "compute real total returns from equity and inflation data" in {
+      val equities = Vector(
+        EquityData("2117.01", 100.0, 10.0),
+        EquityData("2117.02", 101.0, 12.0),
+        EquityData("2117.03", 102.0, 12.0))
+      val inflations = Vector(
+        InflationData("2117.01", 100.0),
+        InflationData("2117.02", 102.0),
+        InflationData("2117.03", 102.0))
+      val returns = Returns.fromEquityAndInflationData(equities,
+        inflations)
+      returns should ===(VariableReturns(Vector(
+        VariableReturn("2117.02", (101.0 + 12.0 / 12) / 100.0 - 102.0 /
+          100.0),
+        VariableReturn("2117.03", (102.0 + 12.0 / 12) / 101.0 - 102.0 /
+          102.0))))
+    } }
+
 
 }

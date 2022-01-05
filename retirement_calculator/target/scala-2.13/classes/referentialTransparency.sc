@@ -45,10 +45,14 @@ def area(r: Rectangle): Double = {
   else r.width * r.height
 }
 
-val area1 = area(3, 2)
-val area2 = area(4, 2)
+val area1 = area(Rectangle(6, 2))
+val area2 = area(Rectangle(4, 2))
+
 val total = try {
   area1 + area2
 } catch {
   case e: IllegalArgumentException => 0
 }
+
+// behaviour of the program changes when we
+// substitute the expression with its value;

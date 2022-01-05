@@ -41,7 +41,7 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m  should RetCalc.simulatePlan[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should calculate the capital at retirement and the capital after death[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should use different returns for capitalisation and drawdown[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 718 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 658 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 18[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 5, aborted 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 17, failed 1, canceled 0, ignored 0, pending 0[0m[0m
@@ -49,5 +49,5 @@
 [0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
 [0m[[0m[31merror[0m] [0m[0m	retcalc.SimulatePlanIT[0m
 [0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
-[0m[[0m[31merror[0m] [0m[0mTotal time: 5 s, completed 05-Jan-2022 17:02:34[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 3 s, completed 05-Jan-2022 17:29:54[0m
 [0m[[0m[0mdebug[0m] [0m[0m> Exec(idea-shell, None, None)[0m

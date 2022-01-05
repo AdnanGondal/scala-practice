@@ -38,7 +38,7 @@ class ReturnsSpec extends AnyWordSpec with TypeCheckedTripleEquals with Matchers
       VariableReturn("2000.02", 0.2)))
     "return the nth rate for VariableReturn" in {
       Returns.monthlyRate(variableReturns, 0).value should ===(0.1)
-      Returns.monthlyRate(variableReturns, 1).value ===(0.2)
+      Returns.monthlyRate(variableReturns, 1).value should ===(0.2)
     }
     "Return None if n > length" in {
       Returns.monthlyRate(variableReturns, 2).left.value should ===(

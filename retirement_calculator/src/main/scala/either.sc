@@ -44,7 +44,7 @@ def averageAgeOf3(name1: String, name2: String, name3: String, db: Map[String,In
 Either[String,Double] = {
       for {
             age1 <- getPersonAge(name1,db)
-              age2 <- getPersonAge(name2,db)
+            age2 <- getPersonAge(name2,db)
             age3 <- getPersonAge(name3,db)
       } yield (age1 + age2 + age3).toDouble /3
 }

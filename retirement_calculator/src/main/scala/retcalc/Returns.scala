@@ -16,10 +16,12 @@ case class VariableReturn(monthId: String, monthlyRate: Double)
 
 object Returns {
 
-  def monthlyRate(returns: Returns, month: Int): Double = {
+  def monthlyRate(returns: Returns, month: Int): Either[RetCalcError,Double] = {
     returns match {
-      case FixedReturns(r) => r / 12
-      case VariableReturns(rs) => rs(month % rs.length).monthlyRate
+      case FixedReturns(r) => Right(r / 12)
+      case VariableReturns(rs) => if (rs.isDefinedAt(month))  {Right(rs(month).monthlyRate)}
+      else {Left(RetCalcError.ReturnMonthOutOfBounds(month,rs.size-1))}
+
       case OffsetReturns(rs, offset) => monthlyRate(rs, month + offset)
     }
   }

@@ -1,10 +1,12 @@
 package retcalc
 
 import org.scalactic.{Equality, TolerantNumerics, TypeCheckedTripleEquals}
+import org.scalatest.EitherValues
 import org.scalatest.matchers.should.Matchers
 import org.scalatest.wordspec.AnyWordSpec
 
-class ReturnsSpec extends AnyWordSpec with TypeCheckedTripleEquals with Matchers{
+class ReturnsSpec extends AnyWordSpec with TypeCheckedTripleEquals with Matchers with EitherValues
+{
   implicit val doubleEquality: Equality[Double] =
     TolerantNumerics.tolerantDoubleEquality(0.0001)
 
@@ -27,25 +29,27 @@ class ReturnsSpec extends AnyWordSpec with TypeCheckedTripleEquals with Matchers
 
   "Returns.monthRate" should {
     "return a fixed rate for a fixed return" in {
-      Returns.monthlyRate(FixedReturns(0.04),0) should ===(0.04/12)
-      Returns.monthlyRate(FixedReturns(0.04), 10) should ===(0.04 / 12)
+      Returns.monthlyRate(FixedReturns(0.04),0).value should ===(0.04/12)
+      Returns.monthlyRate(FixedReturns(0.04), 10).value should ===(0.04 / 12)
     }
 
     val variableReturns = VariableReturns(Vector(
       VariableReturn("2000.01", 0.1),
       VariableReturn("2000.02", 0.2)))
     "return the nth rate for VariableReturn" in {
-      Returns.monthlyRate(variableReturns, 0) should ===(0.1)
-      Returns.monthlyRate(variableReturns, 1) should ===(0.2)
+      Returns.monthlyRate(variableReturns, 0).value should ===(0.1)
+      Returns.monthlyRate(variableReturns, 1).value ===(0.2)
     }
-    "roll over from the first rate if n > length" in {
-      Returns.monthlyRate(variableReturns, 2) should ===(0.1)
-      Returns.monthlyRate(variableReturns, 3) should ===(0.2)
-      Returns.monthlyRate(variableReturns, 4) should ===(0.1)
+    "Return None if n > length" in {
+      Returns.monthlyRate(variableReturns, 2).left.value should ===(
+        RetCalcError.ReturnMonthOutOfBounds(2, 1))
+      Returns.monthlyRate(variableReturns, 3).left.value should ===(
+        RetCalcError.ReturnMonthOutOfBounds(3, 1))
+
     }
     "return the n+offset th rate for OffsetReturn" in {
       val returns = OffsetReturns(variableReturns, 1)
-      Returns.monthlyRate(returns, 0) should ===(0.2)
+      Returns.monthlyRate(returns, 0).value should ===(0.2)
     }
 
   }

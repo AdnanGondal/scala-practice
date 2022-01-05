@@ -26,7 +26,7 @@ object RetCalc {
     (capitalAtRetirement,capitalAfterDeath)
   }
 
-  def nbOfMonthsSaving(returns: Returns, nbOfMonthsInRetirement: Int, netIncome: Int, currentExpenses: Int, initialCapital: Double): Int= {
+  def nbOfMonthsSaving(returns: Returns, nbOfMonthsInRetirement: Int, netIncome: Int, currentExpenses: Int, initialCapital: Double): Option[Int]= {
 
     @tailrec
     def loop(months: Int): Int = {
@@ -43,9 +43,9 @@ object RetCalc {
           loop(months + 1)
     }
     if (netIncome > currentExpenses)
-      loop(0)
+      Some(loop(0))
     else
-      Int.MaxValue
+      None
   }
 
 }

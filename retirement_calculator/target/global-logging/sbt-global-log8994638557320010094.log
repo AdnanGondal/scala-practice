@@ -1,9 +1,19 @@
-[0m[[0m[0mdebug[0m] [0m[0m> Exec(assembly, None, None)[0m
-[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: assembly[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(test, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / test[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
-[0m[[0m[0minfo[0m] [0m[0mIncluding from cache: scalactic_2.13-3.2.10.jar[0m
-[0m[[0m[0minfo[0m] [0m[0mIncluding from cache: scala-reflect-2.13.7.jar[0m
-[0m[[0m[0minfo[0m] [0m[0mIncluding from cache: scala-library-2.13.7.jar[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/adnangondal/proj/scala/retirement_calculator/target/scala-2.13/test-classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mEquityDataSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mEquityData.fromResource[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should load market data from a tsv file[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mEquityData.monthlyDividend[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return a monthly dividend[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mSimulatePlanIT:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mSimulatePlanApp.strMain[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should simulate a retirement plan using market returns[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mInflationDataSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mInflationData.fromResource[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should load CPI data from a tsv file[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mReturnsSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mVariableReturns.fromUntil[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should keep only a window of the returns[0m[0m
@@ -14,17 +24,6 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m- should return the n+offset th rate for OffsetReturn[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mReturns.fromEquityAndInflationData[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should compute real total returns from equity and inflation data[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mEquityDataSpec:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mEquityData.fromResource[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should load market data from a tsv file[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mEquityData.monthlyDividend[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should return a monthly dividend[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mInflationDataSpec:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mInflationData.fromResource[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should load CPI data from a tsv file[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mSimulatePlanIT:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mSimulatePlanApp.strMain[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should simulate a retirement plan using market returns[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mRetCalcSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mRetCalc.futureCapital[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should calculate the amount of savings I will have in n months[0m[0m
@@ -37,15 +36,10 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m  should RetCalc.simulatePlan[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should calculate the capital at retirement and the capital after death[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should use different returns for capitalisation and drawdown[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 5 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 686 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 17[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 5, aborted 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 17, failed 0, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0mChecking every *.class/*.jar file's SHA-1.[0m
-[0m[[0m[0minfo[0m] [0m[0mMerging files...[0m
-[0m[[0m[33mwarn[0m] [0m[0mMerging 'META-INF/MANIFEST.MF' with strategy 'discard'[0m
-[0m[[0m[33mwarn[0m] [0m[0mStrategy 'discard' was applied to a file[0m
-[0m[[0m[0minfo[0m] [0m[0mAssembly up to date: /Users/adnangondal/proj/scala/retirement_calculator/target/scala-2.13/retirement_calculator-assembly-0.1.jar[0m
-[0m[[0m[32msuccess[0m] [0m[0mTotal time: 2 s, completed 04-Jan-2022 17:09:43[0m
+[0m[[0m[32msuccess[0m] [0m[0mTotal time: 7 s, completed 05-Jan-2022 12:45:42[0m
 [0m[[0m[0mdebug[0m] [0m[0m> Exec(idea-shell, None, None)[0m

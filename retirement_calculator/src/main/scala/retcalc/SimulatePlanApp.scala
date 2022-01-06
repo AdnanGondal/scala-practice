@@ -1,9 +1,26 @@
 package retcalc
 
+import cats.data.{NonEmptyList, Validated}
+import cats.data.Validated.Valid
+import retcalc.RetCalcError.{InvalidNumber, RetCalcResult}
+
 object SimulatePlanApp extends App {
 
   println(strMain(args))
-  def strMain(args: Array[String]): String = {
+  // parses string, to produce valided int
+  def parseInt(name: String, value: String): RetCalcResult[Int] = {
+  Validated.catchOnly[NumberFormatException](value.toInt).leftMap(_ =>  NonEmptyList.of(InvalidNumber(name, value)))
+  }
+
+  def parseFromUntil(name: String, value: String): RetCalcResult[(String,String)] = {
+  ???
+  }
+
+  def parseParams(args: Array[String]): RetCalcResult[RetCalcParams] = {
+  ???
+  }
+
+  def strMain(args: Array[String]): Validated[String,String] = {
     val (from +: until +: Nil) = args(0).split(",").toList
     val nbOfYearsSaving = args(1).toInt
     val nbOfYearsInRetirement = args(2).toInt
@@ -19,13 +36,13 @@ object SimulatePlanApp extends App {
           currentExpenses = args(4).toInt,
           initialCapital = args(5).toInt),
         nbOfMonthsSavings = nbOfYearsSaving * 12) match {
-        case Right((capitalAtRetirement, capitalAfterDeath)) =>
+        case Right((capitalAtRetirement, capitalAfterDeath)) => Valid(
           s"""
            |Capital after $nbOfYearsSaving years of savings:${capitalAtRetirement.round}
            |Capital after $nbOfYearsInRetirement years in retirement:${capitalAfterDeath.round}
-           |""".stripMargin
+           |""".stripMargin)
 
-        case Left(err) => err.message
+        case Left(err) => Valid(err.message)
       }
 
   }

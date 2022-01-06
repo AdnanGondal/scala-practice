@@ -1,9 +1,8 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(retcalc.SimulatePlanAppSpec, org.scalatest.tools.Framework$$anon$1@64bc4867, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(retcalc.SimulatePlanIT, org.scalatest.tools.Framework$$anon$1@64bc4867, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(retcalc.InflationDataSpec, org.scalatest.tools.Framework$$anon$1@64bc4867, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(retcalc.EquityDataSpec, org.scalatest.tools.Framework$$anon$1@64bc4867, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(retcalc.RetCalcSpec, org.scalatest.tools.Framework$$anon$1@64bc4867, false, [SuiteSelector])[0m
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(retcalc.ReturnsSpec, org.scalatest.tools.Framework$$anon$1@64bc4867, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(test, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / test[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/adnangondal/proj/scala/retirement_calculator/target/scala-2.13/test-classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mInflationDataSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mInflationData.fromResource[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should load CPI data from a tsv file[0m[0m
@@ -74,12 +73,8 @@
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 6, aborted 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 19, failed 3, canceled 0, ignored 0, pending 0[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m*** 3 TESTS FAILED ***[0m[0m
-[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
-[0m[[0m[0mdebug[0m] [0m[0m	retcalc.InflationDataSpec[0m
-[0m[[0m[0mdebug[0m] [0m[0m	retcalc.EquityDataSpec[0m
-[0m[[0m[0mdebug[0m] [0m[0m	retcalc.RetCalcSpec[0m
-[0m[[0m[0mdebug[0m] [0m[0m	retcalc.ReturnsSpec[0m
-[0m[[0m[0mdebug[0m] [0m[0m	retcalc.SimulatePlanAppSpec[0m
 [0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
 [0m[[0m[31merror[0m] [0m[0m	retcalc.SimulatePlanIT[0m
 [0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 3 s, completed 06-Jan-2022 15:36:43[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(idea-shell, None, None)[0m

@@ -1,6 +1,6 @@
 [0m[[0m[0mdebug[0m] [0m[0m[zinc] IncrementalCompile -----------[0m
 [0m[[0m[0mdebug[0m] [0m[0mIncrementalCompile.incrementalCompile[0m
-[0m[[0m[0mdebug[0m] [0m[0mprevious = Stamps for: 5 products, 5 sources, 6 libraries[0m
-[0m[[0m[0mdebug[0m] [0m[0mcurrent source = Set(${BASE}/src/test/scala/retcalc/InflationDataSpec.scala, ${BASE}/src/test/scala/retcalc/EquityDataSpec.scala, ${BASE}/src/test/scala/retcalc/RetCalcSpec.scala, ${BASE}/src/test/scala/retcalc/SimulatePlanIT.scala, ${BASE}/src/test/scala/retcalc/ReturnsSpec.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mprevious = Stamps for: 6 products, 6 sources, 7 libraries[0m
+[0m[[0m[0mdebug[0m] [0m[0mcurrent source = Set(${BASE}/src/test/scala/retcalc/SimulatePlanAppSpec.scala, ${BASE}/src/test/scala/retcalc/InflationDataSpec.scala, ${BASE}/src/test/scala/retcalc/EquityDataSpec.scala, ${BASE}/src/test/scala/retcalc/RetCalcSpec.scala, ${BASE}/src/test/scala/retcalc/SimulatePlanIT.scala, ${BASE}/src/test/scala/retcalc/ReturnsSpec.scala)[0m
 [0m[[0m[0mdebug[0m] [0m[0m> initialChanges = InitialChanges(Changes(added = Set(), removed = Set(), changed = Set(), unmodified = ...),Set(),Set(),API Changes: Set())[0m
 [0m[[0m[0mdebug[0m] [0m[0mNo changes[0m

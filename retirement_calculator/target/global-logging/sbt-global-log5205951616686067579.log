@@ -1,11 +1,6 @@
 [0m[[0m[0mdebug[0m] [0m[0m> Exec(test, None, None)[0m
 [0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / test[0m
 [0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
-[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/adnangondal/proj/scala/retirement_calculator/target/scala-2.13/test-classes ...[0m
-[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mInflationDataSpec:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mInflationData.fromResource[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should load CPI data from a tsv file[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mEquityDataSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mEquityData.fromResource[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should load market data from a tsv file[0m[0m
@@ -15,16 +10,24 @@
 [0m[[0m[0minfo[0m] [0m[0m[32mSimplePlanApp.parseInt[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should return a Valid value with the correct result[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should return Invalid value with the error message[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mReturnsSpec:[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mVariableReturns.fromUntil[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should keep only a window of the returns[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mReturns.monthRate[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should return a fixed rate for a fixed return[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should return the nth rate for VariableReturn[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should Return None if n > length[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should return the n+offset th rate for OffsetReturn[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32mReturns.fromEquityAndInflationData[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[32m- should compute real total returns from equity and inflation data[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mSimplePlanApp.fromUntil[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return a valid value with the correct result[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m- should Return result stating invalid argument *** FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  java.lang.ArrayIndexOutOfBoundsException: 1[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at retcalc.SimulatePlanApp$.parseFromUntil(SimulatePlanApp.scala:21)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at retcalc.SimulatePlanAppSpec.$anonfun$new$6(SimulatePlanAppSpec.scala:30)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.wordspec.AnyWordSpecLike$$anon$3.apply(AnyWordSpecLike.scala:1227)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mInflationDataSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mInflationData.fromResource[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should load CPI data from a tsv file[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mSimulatePlanIT:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mSimulatePlanApp.strMain[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should simulate a retirement plan using market returns[0m[0m
@@ -32,7 +35,7 @@
 [0m[[0m[0minfo[0m] [0m[0m[31m  Valid(Cannot get the return for month 780. Accepted range: 0 to 779) did not equal Invalid(Cannot get the return for month 780. Accepted range: 0 to 779) (SimulatePlanIT.scala:27)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m- should return a usage example when the number of arguments is incorrect *** FAILED ***[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: List(1952.09:2017.09) (of class scala.collection.immutable.$colon$colon)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at retcalc.SimulatePlanApp$.strMain(SimulatePlanApp.scala:24)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at retcalc.SimulatePlanApp$.strMain(SimulatePlanApp.scala:30)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m  at retcalc.SimulatePlanIT.$anonfun$new$4(SimulatePlanIT.scala:31)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
@@ -45,7 +48,7 @@
 [0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m- should return several errors when several arguments are invalid *** FAILED ***[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m  scala.MatchError: List(1952.09:2017.09) (of class scala.collection.immutable.$colon$colon)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at retcalc.SimulatePlanApp$.strMain(SimulatePlanApp.scala:24)[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m  at retcalc.SimulatePlanApp$.strMain(SimulatePlanApp.scala:30)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m  at retcalc.SimulatePlanIT.$anonfun$new$5(SimulatePlanIT.scala:43)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
@@ -56,6 +59,16 @@
 [0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mReturnsSpec:[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mVariableReturns.fromUntil[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should keep only a window of the returns[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mReturns.monthRate[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return a fixed rate for a fixed return[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the nth rate for VariableReturn[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should Return None if n > length[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should return the n+offset th rate for OffsetReturn[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mReturns.fromEquityAndInflationData[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should compute real total returns from equity and inflation data[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mRetCalcSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mRetCalc.futureCapital[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should calculate the amount of savings I will have in n months[0m[0m
@@ -68,13 +81,14 @@
 [0m[[0m[0minfo[0m] [0m[0m[32m  should RetCalc.simulatePlan[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should calculate the capital at retirement and the capital after death[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m  - should use different returns for capitalisation and drawdown[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 766 milliseconds.[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 22[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 1 second, 850 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 24[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 6, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 19, failed 3, canceled 0, ignored 0, pending 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m*** 3 TESTS FAILED ***[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 20, failed 4, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[31m*** 4 TESTS FAILED ***[0m[0m
 [0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
 [0m[[0m[31merror[0m] [0m[0m	retcalc.SimulatePlanIT[0m
+[0m[[0m[31merror[0m] [0m[0m	retcalc.SimulatePlanAppSpec[0m
 [0m[[0m[31merror[0m] [0m[0m(Test / [31mtest[0m) sbt.TestsFailedException: Tests unsuccessful[0m
-[0m[[0m[31merror[0m] [0m[0mTotal time: 3 s, completed 06-Jan-2022 15:36:43[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 3 s, completed 06-Jan-2022 16:10:43[0m
 [0m[[0m[0mdebug[0m] [0m[0m> Exec(idea-shell, None, None)[0m

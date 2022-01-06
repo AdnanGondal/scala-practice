@@ -1,4 +1,8 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(retcalc.SimulatePlanAppSpec, org.scalatest.tools.Framework$$anon$1@4f56f6fe, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(testOnly retcalc.SimulatePlanAppSpec, None, None)[0m
+[0m[[0m[0mdebug[0m] [0m[0mEvaluating tasks: Test / testOnly[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning task... Cancel: Signal, check cycles: false, forcegc: true[0m
+[0m[[0m[0minfo[0m] [0m[0mcompiling 1 Scala source to /Users/adnangondal/proj/scala/retirement_calculator/target/scala-2.13/classes ...[0m
+[0m[[0m[0minfo[0m] [0m[0mdone compiling[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mSimulatePlanAppSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mSimplePlanApp.parseInt[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should return a Valid value with the correct result[0m[0m
@@ -26,3 +30,5 @@
 [0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
 [0m[[0m[31merror[0m] [0m[0m	retcalc.SimulatePlanAppSpec[0m
 [0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[31merror[0m] [0m[0mTotal time: 3 s, completed 06-Jan-2022 16:10:27[0m
+[0m[[0m[0mdebug[0m] [0m[0m> Exec(idea-shell, None, None)[0m

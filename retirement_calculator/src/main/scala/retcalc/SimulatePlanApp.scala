@@ -2,7 +2,8 @@ package retcalc
 
 import cats.data.{NonEmptyList, Validated}
 import cats.data.Validated.Valid
-import retcalc.RetCalcError.{InvalidNumber, RetCalcResult}
+import retcalc.RetCalcError.{InvalidArgument, InvalidNumber, RetCalcResult}
+import cats.implicits._
 
 object SimulatePlanApp extends App {
 
@@ -12,8 +13,13 @@ object SimulatePlanApp extends App {
   Validated.catchOnly[NumberFormatException](value.toInt).leftMap(_ =>  NonEmptyList.of(InvalidNumber(name, value)))
   }
 
-  def parseFromUntil(name: String, value: String): RetCalcResult[(String,String)] = {
-  ???
+  def parseFromUntil(fromUntil: String): RetCalcResult[(String,String)] = {
+    val array = fromUntil.split(",")
+    if (array.length != 2) {
+      InvalidArgument(name = "fromUntil",value=fromUntil,expectedFormat = "from,until").invalidNel
+    }
+    (array(0),array(1)).validNel
+
   }
 
   def parseParams(args: Array[String]): RetCalcResult[RetCalcParams] = {

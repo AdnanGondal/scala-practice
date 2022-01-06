@@ -51,6 +51,7 @@ object SimulatePlanApp extends App {
   }
 
   def strMain(args: Array[String]): Validated[String, String] = {
+    // if wrong size; return invalid value as reqired
     if (args.length != 6)
       """Usage:
         |simulatePlan from,until nbOfYearsSaving nbOfYearsRetired netIncome currentExpenses initialCapital
@@ -59,6 +60,9 @@ object SimulatePlanApp extends App {
         |simulatePlan 1952.09,2017.09 25 40 3000 2000 10000
         |""".stripMargin.invalid
     else {
+      // as before
+
+      // functions called before:
       val allReturns = Returns.fromEquityAndInflationData(
         equities = EquityData.fromResource("sp500.tsv"),
         inflations = InflationData.fromResource("cpi.tsv"))
@@ -66,12 +70,15 @@ object SimulatePlanApp extends App {
       val vNbOfYearsSaving = parseInt("nbOfYearsSaving", args(1))
       val vParams = parseParams(args)
       (vFromUntil, vNbOfYearsSaving, vParams)
-        .tupled
+        .tupled    // tupled: converts three RetCalcResults into one; but as a tuple
+
+        // validate arguments, AND then call the function...
         .andThen { case ((from, until), nbOfYearsSaving, params) =>
           strSimulatePlan(allReturns.fromUntil(from, until),
             nbOfYearsSaving, params)
         }
         .leftMap(nel => nel.map(_.message).toList.mkString("\n"))
+        // transform invalid to one big string with all the errors
     }
 
   }

@@ -42,7 +42,7 @@ class SimulatePlanIT extends AnyWordSpec with Matchers with TypeCheckedTripleEqu
         Array("1952.09:2017.09", "25.0", "60", "3'000", "2000.0",
           "10000"))
       result should ===(Invalid(
-        """Invalid format for fromUntil. Expected: from,until, actual:
+        """Invalid format for fromUntil. Expected: from,until, actual:1952.09:2017.09
           |Invalid number for nbOfYearsSaving: 25.0
           |Invalid number for netIncome: 3'000
           |Invalid number for currentExpenses: 2000.0""".stripMargin))

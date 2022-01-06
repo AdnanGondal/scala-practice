@@ -1,28 +1,15 @@
-[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(retcalc.SimulatePlanAppSpec, org.scalatest.tools.Framework$$anon$1@4f56f6fe, false, [SuiteSelector])[0m
+[0m[[0m[0mdebug[0m] [0m[0mRunning TaskDef(retcalc.SimulatePlanAppSpec, org.scalatest.tools.Framework$$anon$1@376c5a0e, false, [SuiteSelector])[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mSimulatePlanAppSpec:[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mSimplePlanApp.parseInt[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should return a Valid value with the correct result[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should return Invalid value with the error message[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32mSimplePlanApp.fromUntil[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[32m- should return a valid value with the correct result[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m- should Return result stating invalid argument *** FAILED ***[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  java.lang.ArrayIndexOutOfBoundsException: 1[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at retcalc.SimulatePlanApp$.parseFromUntil(SimulatePlanApp.scala:21)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at retcalc.SimulatePlanAppSpec.$anonfun$new$6(SimulatePlanAppSpec.scala:30)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf(OutcomeOf.scala:85)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf.outcomeOf$(OutcomeOf.scala:83)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.OutcomeOf$.outcomeOf(OutcomeOf.scala:104)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:22)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.Transformer.apply(Transformer.scala:20)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.wordspec.AnyWordSpecLike$$anon$3.apply(AnyWordSpecLike.scala:1227)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.TestSuite.withFixture(TestSuite.scala:196)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  at org.scalatest.TestSuite.withFixture$(TestSuite.scala:195)[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m  ...[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 497 milliseconds.[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32m- should Return result stating invalid argument[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mRun completed in 512 milliseconds.[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mTotal number of tests run: 4[0m[0m
 [0m[[0m[0minfo[0m] [0m[0m[36mSuites: completed 1, aborted 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 3, failed 1, canceled 0, ignored 0, pending 0[0m[0m
-[0m[[0m[0minfo[0m] [0m[0m[31m*** 1 TEST FAILED ***[0m[0m
-[0m[[0m[31merror[0m] [0m[0mFailed tests:[0m
-[0m[[0m[31merror[0m] [0m[0m	retcalc.SimulatePlanAppSpec[0m
-[0m[[0m[31merror[0m] [0m[0m(Test / [31mtestOnly[0m) sbt.TestsFailedException: Tests unsuccessful[0m
+[0m[[0m[0minfo[0m] [0m[0m[36mTests: succeeded 4, failed 0, canceled 0, ignored 0, pending 0[0m[0m
+[0m[[0m[0minfo[0m] [0m[0m[32mAll tests passed.[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mPassed tests:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	retcalc.SimulatePlanAppSpec[0m

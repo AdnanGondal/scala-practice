@@ -25,7 +25,7 @@ val anAnimal: Animal = lassie// dog
 val myDogs: List[Animal] = List(lassie,hachi,laika)
 // a list of animals      // a list of dogs
 
-val myAnimals: List[Dog] = List(anAnimal)
+//val myAnimals: List[Dog] = List(anAnimal)
 
 // essentially the polymorphic capability is transformed to the list type
 
